@@ -20,7 +20,8 @@
       "dist/*.js"
     ],
     "delay": "100",
-    "quiet": false
+    "quiet": true,
+    "verbose": false
   },
   "keywords": [],
   "author": "",
