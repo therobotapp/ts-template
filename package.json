@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "watch:all": "concurrently npm:build:watch nodemon",
+    "watch:all": "concurrently --raw npm:build:watch nodemon",
     "clean": "rimraf dist",
     "dev": "npm run clean && npm run build && npm run watch:all"
   },
