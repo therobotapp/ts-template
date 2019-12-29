@@ -1,0 +1,40 @@
+{
+  "name": "ts-valid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "watch:all": "concurrently npm:build:watch nodemon",
+    "clean": "rimraf dist",
+    "dev": "npm run clean && npm run build && npm run watch:all"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "exec": "node dist/index.js",
+    "watch": [
+      "dist/**/*.js",
+      "dist/*.js"
+    ],
+    "delay": "100",
+    "quiet": false
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.1.1",
+    "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/parser": "^2.11.0",
+    "concurrently": "^5.0.0",
+    "eslint": "6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-typescript": "^3.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "typescript": "^3.7.4"
+  }
+}
