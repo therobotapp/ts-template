@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node dist/index.js",
     "build": "tsc",
     "build:watch": "tsc --watch",
     "watch:all": "concurrently --raw npm:build:watch nodemon",
@@ -12,7 +13,7 @@
   },
   "nodemonConfig": {
     "restartable": "rs",
-    "exec": "node dist/index.js",
+    "exec": "npm start",
     "watch": [
       "dist/**/*.js",
       "dist/*.js"
